@@ -1,4 +1,8 @@
-<?php 
+<?php
+session_start();
+if(!isset($_SESSION['auth'])) {
+	header('location:auth/option.php');
+};
 require "app/controller/ViewController.php";
 use App\Controller\ViewController;
 $fetch = new ViewController();
@@ -6,20 +10,7 @@ $fetch = new ViewController();
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Sertifikasi</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</head>
-
+<?php require "components/head.php"; ?>
 <body>
 <section class="pt-4 bg-success">
   <div>
@@ -54,7 +45,7 @@ $fetch = new ViewController();
 					</tr>
 				</thead>
 				<tbody>
-                <?php foreach($fetch->fetch('t_user', 'status = 0') as $a) { ?>
+                <?php foreach($fetch->fetch('peserta', 'id_user') as $a) { ?>
 					<tr>
 						<td>
                             <img width="40" height="40" src="<?= $a['foto'] ?>" alt="">

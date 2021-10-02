@@ -9,7 +9,7 @@ if($_POST['type'] == 'update') {
         'email' => $_POST['email'],
         'hp' => $_POST['phone'],
     );
-    $add->update('t_user', $data, 'id_user = ' . $_POST['id_user']);
+    $add->update('peserta', $data, 'id_user = ' . $_POST['id_user']);
     header('location:index.php');
 }
 ?>

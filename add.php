@@ -10,7 +10,7 @@ if($_POST['type'] == 'add') {
         'email' => $_POST['email'],
         'hp' => $_POST['phone'],
     );
-    $add->create('t_user', $data);
+    $add->create('peserta', $data);
     header('location:index.php');
 }
 ?>
