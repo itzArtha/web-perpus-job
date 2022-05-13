@@ -27,10 +27,10 @@ $fetch = new ViewController();
   </div>
 </nav>
 
-  <div class="bg">
+  <div class="bg-user">
      <div class="container text-center ">
-        <h1 class="display-5 pt-5 text-dark font-weight-bold">SELAMAT DATANG DI PERPUSTAKAAN TAMAN BACA PALEMBANG</h1>
-        <p class="lead text-dark font-weight-bold fs-2">"HALO, USER..."</p>
+        <h1 class="display-5 pt-5 text-dark font-weight-bold">"HALO, USER..."</h1>
+        
      </div>
   </div>
 </section>
