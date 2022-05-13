@@ -18,5 +18,12 @@ class ViewController {
         $hasil = $this->data->con->query($data);
         return $hasil->fetch_all(MYSQLI_BOTH);
     }
+
+    public function show($table, $cond = null)
+    {
+        $data = "SELECT * FROM $table WHERE $cond";
+        $hasil = $this->data->con->query($data);
+        $hasil = $hasil->fetch_all(MYSQLI_BOTH);
+        return array_shift($hasil);
+    }
 }
-?>
