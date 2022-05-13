@@ -25,7 +25,8 @@ class CreateController {
         $sql .= "(" . substr($row, 1) . ")";
         $sql .= " VALUES(" . substr($data, 1) . ")";
 
-        $hasil = $this->data->con->prepare($sql);
+        $hasil = $this->data->con->prepare($sql)or die("Gagal mengecek user di database");
+        
         $hasil->execute();
     }
 }

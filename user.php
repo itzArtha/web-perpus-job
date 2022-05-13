@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['auth'])) {
+	header('location:auth/option.php');
+};
+require "app/controller/ViewController.php";
+use App\Controller\ViewController;
+$fetch = new ViewController();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php require "components/head.php"; ?>
@@ -11,17 +21,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
-	  <li class="nav-item">
-        <a class="nav-link" href="./auth/register.php">Register</a>
-      </li>
-      </ul>	
+     
+      </ul>
     </div>
   </div>
 </nav>
 
-  <div class="bg">
+  <div class="bg-user">
      <div class="container text-center ">
-        <h1 class="display-5 pt-5 text-dark font-weight-bold">SELAMAT DATANG DI PERPUSTAKAAN TAMAN BACA PALEMBANG</h1>
+        <h1 class="display-5 pt-5 text-dark font-weight-bold">"HALO, USER..."</h1>
         
      </div>
   </div>
