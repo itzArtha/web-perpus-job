@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require "components/head.php"; ?>
-<body>
+<body class="bg-yellow">
 <section>
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" style="background-color:#dc6ecf !important ;">
   <div class="container-fluid">

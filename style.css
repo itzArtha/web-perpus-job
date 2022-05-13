@@ -1,9 +1,12 @@
 body {
 	color: #566787;
-	background: #ffd760;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 13px;
 	
+}
+
+.bg-yellow {
+	background: #ffd760;
 }
 
 .bg-user{

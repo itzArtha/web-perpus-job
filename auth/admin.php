@@ -24,7 +24,7 @@
           </div>
 
           <!-- Submit button -->
-          <button type="submit" class="btn btn-info btn-lg btn-block">Sign in</button>
+          <button type="submit" class="btn btn-info btn-lg btn-block bg-green-500">Sign in</button>
         </form>
       </div>
     </div>

@@ -20,9 +20,9 @@ class AuthController {
         if($success) {
             $_SESSION['auth'] = $success->fetch_assoc();
             if($success->fetch_assoc()['role'] == 0) {
-                header('location:user.php');
+                header('location:admin.php');
             } else {
-                header('location:index.php');
+                header('location:user.php');
             }
         } else {
             echo "Error";
@@ -30,16 +30,14 @@ class AuthController {
     }
     public function register($email, $pass, $nama, $telepon, $alamat)
     {
-        $rule = 0;
-        $sql = "INSERT INTO users (email, password,  nama, telepon, alamat)
-        VALUES ('$email', '$pass', '$nama', '$telepon', '$alamat')";
+        $rule = 1;
+        $sql = "INSERT INTO users (email, password, role, telepon, alamat, nama)
+        VALUES ('$email', '$pass', '$rule', '$telepon', '$alamat', '$nama')";
+        var_dump($sql);
         $success = $this->data->con->prepare($sql);
         $success->execute();
         if($success) {
-            $_SESSION['auth'] = $success->fetch();
-            if($success->fetch()['role'] == 0) {
-                header('location:user.php');
-            }
+            header('location:auth/user.php');
         } else {
             echo "Error";
         }

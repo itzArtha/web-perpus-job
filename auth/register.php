@@ -42,7 +42,7 @@
           </div>
 
           <!-- Submit button -->
-          <button type="submit" name='submit' class="btn btn-success btn-lg btn-block">Sign up</button>
+          <button type="submit" name='submit' class="btn btn-success btn-lg btn-block bg-green-500">Sign up</button>
         </form>
       </div>
     </div>

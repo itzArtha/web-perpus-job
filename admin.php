@@ -1,7 +1,12 @@
 <?php require "components/head.php"; ?>
 <?php
+session_start();
 require "app/controller/ViewController.php";
 use App\Controller\ViewController;
+
+if(!isset($_SESSION['auth'])) {
+    header('location:auth/option.php');
+};
 
 $fetch = new ViewController();
 $responses = $fetch->fetch("users", "role=1");
