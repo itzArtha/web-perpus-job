@@ -1,8 +1,25 @@
 body {
 	color: #566787;
-	background: #f5f5f5;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 13px;
+	
+}
+
+.bg-yellow {
+	background: #ffd760;
+}
+
+.bg-user{
+	background: url("./background-user.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.bg{
+	background: url("./background.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
 }
 .table-responsive {
     margin: 30px 0;

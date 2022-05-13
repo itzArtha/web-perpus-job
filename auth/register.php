@@ -9,13 +9,31 @@
         <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <h4 class="text-center mb-4">Login sebagai admin</h4>
-        <form action="../login.php" method="POST">
+        <h4 class="text-center mb-4">Register sebagai pengguna</h4>
+        <form action="../register.php" method="POST">
+          <!-- Nama input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="form1Example13" name="nama" class="form-control form-control-lg" />
+            <label class="form-label" for="form1Example13">Nama</label>
+          </div> 
+
           <!-- Email input -->
           <div class="form-outline mb-4">
             <input type="email" id="form1Example13" name="email" class="form-control form-control-lg" />
             <label class="form-label" for="form1Example13">Email</label>
           </div>
+
+          <!-- telepon input -->
+          <div class="form-outline mb-4">
+            <input type="number" id="form1Example13" name="telepon" class="form-control form-control-lg" />
+            <label class="form-label" for="form1Example13">Telepon</label>
+          </div>
+
+          <!-- alamat input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="form1Example13" name="alamat" class="form-control form-control-lg" />
+            <label class="form-label" for="form1Example13">Alamat</label>
+          </div> 
 
           <!-- Password input -->
           <div class="form-outline mb-4">
@@ -24,7 +42,7 @@
           </div>
 
           <!-- Submit button -->
-          <button type="submit" class="btn btn-info btn-lg btn-block bg-green-500">Sign in</button>
+          <button type="submit" name='submit' class="btn btn-success btn-lg btn-block bg-green-500">Sign up</button>
         </form>
       </div>
     </div>

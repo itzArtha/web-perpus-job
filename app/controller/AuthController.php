@@ -22,8 +22,22 @@ class AuthController {
             if($success->fetch_assoc()['role'] == 0) {
                 header('location:admin.php');
             } else {
-                header('location:index.php');
+                header('location:user.php');
             }
+        } else {
+            echo "Error";
+        }
+    }
+    public function register($email, $pass, $nama, $telepon, $alamat)
+    {
+        $rule = 1;
+        $sql = "INSERT INTO users (email, password, role, telepon, alamat, nama)
+        VALUES ('$email', '$pass', '$rule', '$telepon', '$alamat', '$nama')";
+        var_dump($sql);
+        $success = $this->data->con->prepare($sql);
+        $success->execute();
+        if($success) {
+            header('location:auth/user.php');
         } else {
             echo "Error";
         }
